@@ -1,14 +1,32 @@
 <?php
 
 function trainkit1() {
-  temp=$(date -u +"%Y%m%d-%H%M%S")
-  
+  //$time = time();
+
+  //$tempdir = "temp_$time";
+  $kit = "TestPress1.zip";
+
+  //`mkdir $tempdir`;
+  //print "*** Created $tempdir...\n";
+  //print "*** Copying $kit...\n";
+  //`cp exercise_zips/$kit $tempdir`;
+  //print "*** Copied $kit.\n";
+  print "*** Unziping $kit...\n";
+  `unzip wpzip/$kit`;
+  print "*** Unziped $kit";
+
+}
+
+trainkit1();
+
+/*
   if [[ $(ls | wc -l) -gt 2 ]]; then
     tempdir="temp_$temp"
     mkdir $tempdir && echo "Created $tempdir..."
     mv * .* $tempdir 2>/dev/null && echo "Moved all files to $tempdir..."
   fi
   curl -O https://scripts.justbluemonster.com/repo/TestPress1.zip && echo "Downloading Sample Install..."
+
   unzip TestPress1.zip > /dev/null && echo "Unzipped core files..."
   mv TestPress1/* TestPress1/.* . 2>/dev/null
   rm -rf TestPress1.zip && echo "Cleaned up setup files..."
@@ -33,12 +51,12 @@ function trainkit1() {
 config
   fi
 . <(curl -sS https://wptool.googlecode.com/hg/wptool)
-wpdb -i database.sql 
+wpdb -i database.sql
 wpurl $siteurl
 rm -rf TestPress1
 rm -rf temp_*
 
   echo -e "\nWordpress Installed... Begin \n"
 }
-
+*/
 ?>
