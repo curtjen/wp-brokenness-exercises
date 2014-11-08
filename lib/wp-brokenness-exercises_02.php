@@ -1,8 +1,10 @@
 <?php
 
-function trainkit2() {
+function setup_kits() {
 
-	$kit = 'testpress2.zip';
+	if( !isset( $_POST['exerciseChoice'] ) ) { die; }
+
+	$kit = $_POST['exerciseChoice'];
 
 	$zip = new ZipArchive;
 	$res = $zip->open("../wpzip/$kit");
@@ -15,11 +17,17 @@ function trainkit2() {
 		echo "Failed to unzip $kit";
 	}
 
-	
-
+	header("Location: " . 	
 
 }	
 
-trainkit2();
+/*function Redirect() {
 
+	header("Location: " . $_SERVER['HTTP_REFERER']);
+	die();
+
+}*/
+
+setup_kits();
+//Redirect();
 ?>
