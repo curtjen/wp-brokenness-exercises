@@ -17,17 +17,8 @@ function setup_kits() {
 		echo "Failed to unzip $kit";
 	}
 
-	header("Location: " . 	
-
+	header("Location: " . $_SERVER['HTTP_REFERER']);
 }	
 
-/*function Redirect() {
-
-	header("Location: " . $_SERVER['HTTP_REFERER']);
-	die();
-
-}*/
-
 setup_kits();
-//Redirect();
 ?>
