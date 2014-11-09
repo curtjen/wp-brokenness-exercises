@@ -5,79 +5,97 @@
   <link rel="stylesheet" type="text/css" href="media/main.css">
 </head>
 <body>
-  <header>
-    <h1>Setup WP Brokenness Exercises</h1>
-  </header>
-  <section>
-    <form action="lib/wp-brokenness-exercises_02.php" method="POST">
-      <div id="db_details">
-        <h4>Database details:</h4>
-        <label>
-          <span>db user:</span>
-          <input type="text" name="db_user" value="db_user"/>
-        </label>
-        <label>
-          <span>db password:</span>
-          <input type="text" name="db_pass" value="db_pass"/>
-        </label>
-      </div>
+  <div id="wrapper">
+    <header>
+      <h1>Setup WP Brokenness Exercises</h1>
+    </header>
+    <section id="content">
+      <p>Welcome and thank you for choosing <i>WP Brokenness Exercises</i> for your WordPress troubleshooting training. The purpose of each of these exercises is to expand your WordPress troubleshooting-fu on your quest to becoming a WordPress Master.</p>
 
-      <div id="choose_exercise">
-        <h4>WordPress Exercise:</h4>
-        <p>Choose a WordPress exercise to troubleshoot.</p>
-        <label>
-          <input type="radio" name="exerciseChoice" value="testpress1.zip" />
-          <span>Description HERE</span>
-        </label>
-        <label>
-          <input type="radio" name="exerciseChoice" value="testpress2.zip" />
-          <span>Description HERE</span>
-        </label>
-        <label>
-          <input type="radio" name="exerciseChoice" value="testpress3.zip" />
-          <span>Description HERE</span>
-        </label>
-        <label>
-          <input type="radio" name="exerciseChoice" value="testpress4.zip" />
-          <span>Description HERE</span>
-        </label>
-        <label>
-          <input type="radio" name="exerciseChoice" value="testpress5.zip" />
-          <span>Description HERE</span>
-        </label>
-        <label>
-          <input type="radio" name="exerciseChoice" value="testpress6.zip" />
-          <span>Description HERE</span>
-        </label>
-        <label>
-          <input type="radio" name="exerciseChoice" value="testpress7.zip" />
-          <span>Description HERE</span>
-        </label>
-        <label>
-          <input type="radio" name="exerciseChoice" value="testpress8.zip" />
-          <span>Description HERE</span>
-        </label>
-        <label>
-          <input type="radio" name="exerciseChoice" value="testpress9.zip" />
-          <span>Description HERE</span>
-        </label>
-        <label>
-          <input type="radio" name="exerciseChoice" value="testpress10.zip" />
-          <span>Description HERE</span>
-        </label>
-      </div>
-      <div>
-        <h5>: Submitting this form will wipe out any data on your database.</h5>
-        <label>
-          <input type="checkbox" name="" value="" />
-          <strong>I understand that submitting this form will wipe out any data on your database.</strong>
-        </label>
-        <input type="submit" value="Install Exercise" />
-      </div>
-    </form>
-      
-  </section>
+      <h4>To get started, you will need the following:</h4>
+      <ol>
+        <li>A hosting account or web server <i>(e.g. Bluehost, Hostmonster, iPage, etc.)</i></li>
+        <li>A database created <i>(e.g. cpuser_dbname)</i></li>
+        <li>A database username added to the database <i>(hang onto both the username and password for use in this setup form)</i></li>
+      </ol>
+      <form action="lib/wp-brokenness-exercises_02.php" method="POST">
+        <div id="db_details" class="form">
+          <h3>Database details:</h3>
+          <label>
+            <span>Database user:</span>
+            <input type="text" name="db_user" value="db_user"/>
+          </label>
+          <label>
+            <span>Database password:</span>
+            <input type="text" name="db_pass" value="db_pass"/>
+          </label>
+        </div>
 
-
+        <div id="choose_exercise" class="form">
+          <h3>WordPress Exercise:</h3>
+          <p>Choose a WordPress exercise to troubleshoot.</p>
+          <div id="wp_exercises">
+            <label>
+              <input type="radio" name="exerciseChoice" value="testpress1.zip" />
+              <span>LABEL HERE</span>
+              <p>DESCRIPTION HERE - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc porta pharetra felis, a facilisis nisi viverra a. Vestibulum vel lectus velit. Aliquam volutpat eros quis arcu vulputate euismod. Donec augue lorem, rutrum ac ligula et, convallis hendrerit purus. Vestibulum imperdiet sodales porta. Donec eros libero, convallis eget tempus at, vulputate nec diam. Nunc congue lorem non orci faucibus, faucibus tincidunt ante fringilla. Quisque non risus at nunc mattis lacinia. Praesent ac erat ultrices, imperdiet quam ac, blandit nunc. Aliquam erat volutpat. Integer faucibus elit non velit faucibus egestas nec sed dolor. Ut venenatis molestie porttitor. Proin augue est, eleifend a nisl sit amet, sollicitudin egestas dolor. Cras bibendum lorem vitae lectus blandit suscipit. Suspendisse pulvinar magna lectus, eu porta quam tincidunt eu. Phasellus egestas pretium felis non malesuada.</p>
+            </label>
+            <label>
+              <input type="radio" name="exerciseChoice" value="testpress2.zip" />
+              <span>LABEL HERE</span>
+              <p>DESCRIPTION HERE - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc porta pharetra felis, a facilisis nisi viverra a. Vestibulum vel lectus velit. Aliquam volutpat eros quis arcu vulputate euismod. Donec augue lorem, rutrum ac ligula et, convallis hendrerit purus. Vestibulum imperdiet sodales porta. Donec eros libero, convallis eget tempus at, vulputate nec diam. Nunc congue lorem non orci faucibus, faucibus tincidunt ante fringilla. Quisque non risus at nunc mattis lacinia. Praesent ac erat ultrices, imperdiet quam ac, blandit nunc. Aliquam erat volutpat. Integer faucibus elit non velit faucibus egestas nec sed dolor. Ut venenatis molestie porttitor. Proin augue est, eleifend a nisl sit amet, sollicitudin egestas dolor. Cras bibendum lorem vitae lectus blandit suscipit. Suspendisse pulvinar magna lectus, eu porta quam tincidunt eu. Phasellus egestas pretium felis non malesuada.</p>
+            </label>
+            <label>
+              <input type="radio" name="exerciseChoice" value="testpress3.zip" />
+              <span>LABEL HERE</span>
+              <p>DESCRIPTION HERE - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc porta pharetra felis, a facilisis nisi viverra a. Vestibulum vel lectus velit. Aliquam volutpat eros quis arcu vulputate euismod. Donec augue lorem, rutrum ac ligula et, convallis hendrerit purus. Vestibulum imperdiet sodales porta. Donec eros libero, convallis eget tempus at, vulputate nec diam. Nunc congue lorem non orci faucibus, faucibus tincidunt ante fringilla. Quisque non risus at nunc mattis lacinia. Praesent ac erat ultrices, imperdiet quam ac, blandit nunc. Aliquam erat volutpat. Integer faucibus elit non velit faucibus egestas nec sed dolor. Ut venenatis molestie porttitor. Proin augue est, eleifend a nisl sit amet, sollicitudin egestas dolor. Cras bibendum lorem vitae lectus blandit suscipit. Suspendisse pulvinar magna lectus, eu porta quam tincidunt eu. Phasellus egestas pretium felis non malesuada.</p>
+            </label>
+            <label>
+              <input type="radio" name="exerciseChoice" value="testpress4.zip" />
+              <span>LABEL HERE</span>
+              <p>DESCRIPTION HERE - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc porta pharetra felis, a facilisis nisi viverra a. Vestibulum vel lectus velit. Aliquam volutpat eros quis arcu vulputate euismod. Donec augue lorem, rutrum ac ligula et, convallis hendrerit purus. Vestibulum imperdiet sodales porta. Donec eros libero, convallis eget tempus at, vulputate nec diam. Nunc congue lorem non orci faucibus, faucibus tincidunt ante fringilla. Quisque non risus at nunc mattis lacinia. Praesent ac erat ultrices, imperdiet quam ac, blandit nunc. Aliquam erat volutpat. Integer faucibus elit non velit faucibus egestas nec sed dolor. Ut venenatis molestie porttitor. Proin augue est, eleifend a nisl sit amet, sollicitudin egestas dolor. Cras bibendum lorem vitae lectus blandit suscipit. Suspendisse pulvinar magna lectus, eu porta quam tincidunt eu. Phasellus egestas pretium felis non malesuada.</p>
+            </label>
+            <label>
+              <input type="radio" name="exerciseChoice" value="testpress5.zip" />
+              <span>LABEL HERE</span>
+              <p>DESCRIPTION HERE - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc porta pharetra felis, a facilisis nisi viverra a. Vestibulum vel lectus velit. Aliquam volutpat eros quis arcu vulputate euismod. Donec augue lorem, rutrum ac ligula et, convallis hendrerit purus. Vestibulum imperdiet sodales porta. Donec eros libero, convallis eget tempus at, vulputate nec diam. Nunc congue lorem non orci faucibus, faucibus tincidunt ante fringilla. Quisque non risus at nunc mattis lacinia. Praesent ac erat ultrices, imperdiet quam ac, blandit nunc. Aliquam erat volutpat. Integer faucibus elit non velit faucibus egestas nec sed dolor. Ut venenatis molestie porttitor. Proin augue est, eleifend a nisl sit amet, sollicitudin egestas dolor. Cras bibendum lorem vitae lectus blandit suscipit. Suspendisse pulvinar magna lectus, eu porta quam tincidunt eu. Phasellus egestas pretium felis non malesuada.</p>
+            </label>
+            <label>
+              <input type="radio" name="exerciseChoice" value="testpress6.zip" />
+              <span>LABEL HERE</span>
+              <p>DESCRIPTION HERE - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc porta pharetra felis, a facilisis nisi viverra a. Vestibulum vel lectus velit. Aliquam volutpat eros quis arcu vulputate euismod. Donec augue lorem, rutrum ac ligula et, convallis hendrerit purus. Vestibulum imperdiet sodales porta. Donec eros libero, convallis eget tempus at, vulputate nec diam. Nunc congue lorem non orci faucibus, faucibus tincidunt ante fringilla. Quisque non risus at nunc mattis lacinia. Praesent ac erat ultrices, imperdiet quam ac, blandit nunc. Aliquam erat volutpat. Integer faucibus elit non velit faucibus egestas nec sed dolor. Ut venenatis molestie porttitor. Proin augue est, eleifend a nisl sit amet, sollicitudin egestas dolor. Cras bibendum lorem vitae lectus blandit suscipit. Suspendisse pulvinar magna lectus, eu porta quam tincidunt eu. Phasellus egestas pretium felis non malesuada.</p>
+            </label>
+            <label>
+              <input type="radio" name="exerciseChoice" value="testpress7.zip" />
+              <span>LABEL HERE</span>
+              <p>DESCRIPTION HERE - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc porta pharetra felis, a facilisis nisi viverra a. Vestibulum vel lectus velit. Aliquam volutpat eros quis arcu vulputate euismod. Donec augue lorem, rutrum ac ligula et, convallis hendrerit purus. Vestibulum imperdiet sodales porta. Donec eros libero, convallis eget tempus at, vulputate nec diam. Nunc congue lorem non orci faucibus, faucibus tincidunt ante fringilla. Quisque non risus at nunc mattis lacinia. Praesent ac erat ultrices, imperdiet quam ac, blandit nunc. Aliquam erat volutpat. Integer faucibus elit non velit faucibus egestas nec sed dolor. Ut venenatis molestie porttitor. Proin augue est, eleifend a nisl sit amet, sollicitudin egestas dolor. Cras bibendum lorem vitae lectus blandit suscipit. Suspendisse pulvinar magna lectus, eu porta quam tincidunt eu. Phasellus egestas pretium felis non malesuada.</p>
+            </label>
+            <label>
+              <input type="radio" name="exerciseChoice" value="testpress8.zip" />
+              <span>LABEL HERE</span>
+              <p>DESCRIPTION HERE - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc porta pharetra felis, a facilisis nisi viverra a. Vestibulum vel lectus velit. Aliquam volutpat eros quis arcu vulputate euismod. Donec augue lorem, rutrum ac ligula et, convallis hendrerit purus. Vestibulum imperdiet sodales porta. Donec eros libero, convallis eget tempus at, vulputate nec diam. Nunc congue lorem non orci faucibus, faucibus tincidunt ante fringilla. Quisque non risus at nunc mattis lacinia. Praesent ac erat ultrices, imperdiet quam ac, blandit nunc. Aliquam erat volutpat. Integer faucibus elit non velit faucibus egestas nec sed dolor. Ut venenatis molestie porttitor. Proin augue est, eleifend a nisl sit amet, sollicitudin egestas dolor. Cras bibendum lorem vitae lectus blandit suscipit. Suspendisse pulvinar magna lectus, eu porta quam tincidunt eu. Phasellus egestas pretium felis non malesuada.</p>
+            </label>
+            <label>
+              <input type="radio" name="exerciseChoice" value="testpress9.zip" />
+              <span>LABEL HERE</span>
+              <p>DESCRIPTION HERE - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc porta pharetra felis, a facilisis nisi viverra a. Vestibulum vel lectus velit. Aliquam volutpat eros quis arcu vulputate euismod. Donec augue lorem, rutrum ac ligula et, convallis hendrerit purus. Vestibulum imperdiet sodales porta. Donec eros libero, convallis eget tempus at, vulputate nec diam. Nunc congue lorem non orci faucibus, faucibus tincidunt ante fringilla. Quisque non risus at nunc mattis lacinia. Praesent ac erat ultrices, imperdiet quam ac, blandit nunc. Aliquam erat volutpat. Integer faucibus elit non velit faucibus egestas nec sed dolor. Ut venenatis molestie porttitor. Proin augue est, eleifend a nisl sit amet, sollicitudin egestas dolor. Cras bibendum lorem vitae lectus blandit suscipit. Suspendisse pulvinar magna lectus, eu porta quam tincidunt eu. Phasellus egestas pretium felis non malesuada.</p>
+            </label>
+            <label>
+              <input type="radio" name="exerciseChoice" value="testpress10.zip" />
+              <span>LABEL HERE</span>
+              <p>DESCRIPTION HERE - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc porta pharetra felis, a facilisis nisi viverra a. Vestibulum vel lectus velit. Aliquam volutpat eros quis arcu vulputate euismod. Donec augue lorem, rutrum ac ligula et, convallis hendrerit purus. Vestibulum imperdiet sodales porta. Donec eros libero, convallis eget tempus at, vulputate nec diam. Nunc congue lorem non orci faucibus, faucibus tincidunt ante fringilla. Quisque non risus at nunc mattis lacinia. Praesent ac erat ultrices, imperdiet quam ac, blandit nunc. Aliquam erat volutpat. Integer faucibus elit non velit faucibus egestas nec sed dolor. Ut venenatis molestie porttitor. Proin augue est, eleifend a nisl sit amet, sollicitudin egestas dolor. Cras bibendum lorem vitae lectus blandit suscipit. Suspendisse pulvinar magna lectus, eu porta quam tincidunt eu. Phasellus egestas pretium felis non malesuada.</p>
+            </label>
+          </div>
+        </div>
+        <div id="form_submit" class="form">
+          <label>
+            <input type="checkbox" name="" value="" />
+            <strong>I understand that submitting this form will wipe out any data on my database.</strong>
+          </label>
+          <input type="submit" value="Install Exercise" />
+        </div>
+      </form>      
+    </section>
+  </div>
 </body>
 </html>

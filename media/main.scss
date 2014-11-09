@@ -1,0 +1,163 @@
+// COLORS
+$color_back_bright: #fff;
+$color_back_dark: #ababab;
+$color_back_light: #f6f6f6;
+$color_back_submit: tomato;
+
+$color_border: #bababa;
+
+$color_input: #bababa;
+
+$color_text_base: #424242;
+$color_text_bright: #fff;
+$color_text_light: #bababa;
+$color_text_submit: #fff;
+
+$color_text-shadow_light-back: #d3d3d3;
+$color_text-shadow_dark-back: #333;
+
+
+
+* {
+  margin:0;
+  padding:0;
+}
+
+html, body {
+  font-size: 1em;
+  color: $color_text_base;
+}
+
+h1, h2, h3 {
+  text-shadow: 1px 1px 3px $color_text-shadow_light-back;
+  font-family: sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin-bottom: .5em;
+}
+
+ol {
+  list-style-position: inside;
+}
+
+p {
+  margin-bottom: .5em;
+}
+
+#wrapper {
+  min-width:300px;
+  margin:0;
+  padding: 0;
+  background: $color_back_light;
+}
+
+header {
+  background: $color_back_dark;
+  width:100%;
+  padding:1em;
+  h1 {
+    color: $color_text_bright;
+    text-shadow: 1px 1px 3px $color_text-shadow_dark-back;
+    margin-bottom: 0;
+  }
+}
+
+#content {
+  padding: 1em;
+  ol {
+    list-style-type: none;
+    margin: 0 0 0 3em;
+    padding: 0;
+    counter-reset: li-counter;
+    > li {
+      position: relative;
+      //margin-bottom: 15px;
+      padding: 0 1em .5em 1em;
+      //background: red;
+      &:before {
+        position: absolute;
+        top: 0;
+        left:-1em;
+        width:1em;
+        height: 1em;
+        font-size: 1.5em;
+        line-height: 0.95;
+        text-align: center;
+        color: $color_text_bright;
+        background: $color_back_dark;
+        content: counter(li-counter);
+        counter-increment: li-counter;
+      }
+    }
+  }
+}
+
+.form {
+  padding: 1em 0;
+  label {
+    display: inline-block;
+    margin: 1em;
+    border-radius: .35em;
+    span {
+      font-weight: bold;
+    }
+  }
+}
+
+#db_details {
+  background: $color_back_light;
+  h4 {
+    text-align: left;
+  }
+  label {
+    span {
+      text-align: right;
+      width:10em;
+      display: inline-block;
+    }
+    input[type="text"] {
+      border-radius: .35em;
+      border: 1px solid $color_border;
+      color: $color_input;
+      padding: 1em;
+      width: 15em;
+    }
+  }
+}
+
+#wp_exercises {
+  text-align: center;
+  label {
+    text-align: left;
+    min-width:300px;
+    max-width: 40%;
+    border: 1px solid $color_border;
+    padding: 1em;
+    background: $color_back_bright;
+    span {
+      margin-bottom: .5em;
+      display: inline-block;
+    }
+    p {
+      color: $color_text_light;
+    }
+  }
+}
+
+#form_submit {
+  padding:1em;
+  label {
+    margin:0;
+    margin-bottom: 1em;
+    width:100%;
+  }
+  input[type="submit"] {
+    border: 0 none;
+    padding: 2em 5em;
+    background-color: $color_back_submit;
+    color: $color_text_submit;
+    display: inline-block;
+    cursor: pointer;
+  }
+}
