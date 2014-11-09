@@ -10,57 +10,72 @@
   </header>
   <section>
     <form action="" method="">
-      <label>
-        <span>db user:</span>
-        <input type="text" name="db_user" value="db_user"/>
-      </label>
-      <label>
-        <span>db password:</span>
-        <input type="text" name="db_pass" value="db_pass"/>
-      </label>
+      <div id="db_details">
+        <h4>Database details:</h4>
+        <label>
+          <span>db user:</span>
+          <input type="text" name="db_user" value="db_user"/>
+        </label>
+        <label>
+          <span>db password:</span>
+          <input type="text" name="db_pass" value="db_pass"/>
+        </label>
+      </div>
+      <div id="choose_exercise">
+        <h4>WordPress Exercise:</h4>
+        <p>Choose an WordPress exercise to troubleshoot.</p>
 
-      <label>
-        <input type="radio" name="exerciseChoice" value="Test Exercise 1" />
-        <span>Description HERE</span>
-      </label>
-      <label>
-        <input type="radio" name="exerciseChoice" value="Test Exercise 2" />
-        <span>Description HERE</span>
-      </label>
-      <label>
-        <input type="radio" name="exerciseChoice" value="Test Exercise 3" />
-        <span>Description HERE</span>
-      </label>
-      <label>
-        <input type="radio" name="exerciseChoice" value="Test Exercise 4" />
-        <span>Description HERE</span>
-      </label>
-      <label>
-        <input type="radio" name="exerciseChoice" value="Test Exercise 5" />
-        <span>Description HERE</span>
-      </label>
-      <label>
-        <input type="radio" name="exerciseChoice" value="Test Exercise 6" />
-        <span>Description HERE</span>
-      </label>
-      <label>
-        <input type="radio" name="exerciseChoice" value="Test Exercise 7" />
-        <span>Description HERE</span>
-      </label>
-      <label>
-        <input type="radio" name="exerciseChoice" value="Test Exercise 8" />
-        <span>Description HERE</span>
-      </label>
-      <label>
-        <input type="radio" name="exerciseChoice" value="Test Exercise 9" />
-        <span>Description HERE</span>
-      </label>
-      <label>
-        <input type="radio" name="exerciseChoice" value="Test Exercise 10" />
-        <span>Description HERE</span>
-      </label>
+        <label>
+          <input type="radio" name="exerciseChoice" value="Test Exercise 1" />
+          <span>Description HERE</span>
+        </label>
+        <label>
+          <input type="radio" name="exerciseChoice" value="Test Exercise 2" />
+          <span>Description HERE</span>
+        </label>
+        <label>
+          <input type="radio" name="exerciseChoice" value="Test Exercise 3" />
+          <span>Description HERE</span>
+        </label>
+        <label>
+          <input type="radio" name="exerciseChoice" value="Test Exercise 4" />
+          <span>Description HERE</span>
+        </label>
+        <label>
+          <input type="radio" name="exerciseChoice" value="Test Exercise 5" />
+          <span>Description HERE</span>
+        </label>
+        <label>
+          <input type="radio" name="exerciseChoice" value="Test Exercise 6" />
+          <span>Description HERE</span>
+        </label>
+        <label>
+          <input type="radio" name="exerciseChoice" value="Test Exercise 7" />
+          <span>Description HERE</span>
+        </label>
+        <label>
+          <input type="radio" name="exerciseChoice" value="Test Exercise 8" />
+          <span>Description HERE</span>
+        </label>
+        <label>
+          <input type="radio" name="exerciseChoice" value="Test Exercise 9" />
+          <span>Description HERE</span>
+        </label>
+        <label>
+          <input type="radio" name="exerciseChoice" value="Test Exercise 10" />
+          <span>Description HERE</span>
+        </label>
+      </div>
+      <div>
+        <h5>: Submitting this form will wipe out any data on your database.</h5>
+        <label>
+          <input type="checkbox" name="" value="" />
+          <strong>I understand that submitting this form will wipe out any data on your database.</strong>
+        </label>
 
-      <input type="submit" value="Purge Existing Database and Install Exercise" />
+
+        <input type="submit" value="Install Exercise" />
+      </div>
     </form>
       
   </section>
