@@ -5,11 +5,17 @@ function setup_kits() {
 	if( !isset( $_POST['exerciseChoice'] ) ) { die; }
 
 	$kit = $_POST['exerciseChoice'];
-	preg_match( '/\d+/', $kit, $kitnum );
+	preg_match( '/[0-9]/', $kit, $num );
 
-	$dbname = $_POST['db_name'];
-	$dbuser = $_POST['db_user'];
-	$dbpass = $_POST['db_pass'];
+	$kitnum = $kit[9];
+
+	$dbname = escapeshellarg( $_POST['db_name'] );
+	$dbuser = escapeshellarg( $_POST['db_user'] );
+	$dbpass = escapeshellarg( $_POST['db_pass'] );
+
+	print $dbname;
+	print $dbuser;
+	print $dbpass;
 
 	$zip = new ZipArchive;
 	$res = $zip->open("../wpzip/$kit");
@@ -18,11 +24,16 @@ function setup_kits() {
 		$zip->close();
 		echo "Unzipped $kit";
 
-		chdir("../TestPress$kitnum['0']");
-		`wpcli db reset --yes`;
-		echo "$dbname has been cleared.";
-		`wpcli core config --dbname=$dbname --dbuser=$dbuser --dbpass=$dbpass`;
-		echo "$dbname is has been setup for Exercise $kitnum['0'].";
+		chdir("../TestPress$kitnum");
+		echo getcwd();
+		system( 'rm -rf wp-config.php' );
+//		system( "wpcli db reset --yes" );
+//		echo "$dbname has been cleared.";
+		passthru( "wp core config --dbuser=$dbuser --dbpass=$dbpass --dbname=$dbname --dbprefix='wp_kjyh_'" );
+		exec( "wp core config --dbuser=$dbuser --dbpass=$dbpass --dbname=$dbname --dbprefix='wp_kjyh_'" );
+		system( "wp core config --dbuser=$dbuser --dbpass=$dbpass --dbname=$dbname --dbprefix='wp_kjyh_'" );
+		shell_exec( "wp core config --dbuser=$dbuser --dbpass=$dbpass --dbname=$dbname --dbprefix='wp_kjyh_'" );
+		echo "$dbname has been setup for Exercise $kitnum.";
 	}
 	else {
 		echo "Failed to unzip $kit";
