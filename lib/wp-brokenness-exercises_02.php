@@ -5,7 +5,7 @@ function setup_kits() {
 	if( !isset( $_POST['exerciseChoice'] ) ) { die; }
 
 	$kit = $_POST['exerciseChoice'];
-	preg_match( '/[0-9]/', $kit, $num );
+	preg_match( '/[0-9]+/', $kit, $num );
 
 	$kitnum = $num[0];
 
@@ -23,9 +23,6 @@ function setup_kits() {
 		chdir("../TestPress$kitnum");
 		echo getcwd();
 		system( 'rm -rf wp-config.php' );
-//		system( "wpcli db reset --yes" );
-//		echo "$dbname has been cleared.";
-//		system( "wp core config --dbuser=$dbuser --dbpass=$dbpass --dbname=$dbname --dbprefix='wp_kjyh_'" );
 		`cp wp-config-sample.php wp-config.php`;
 		`sed -i "s/'database_name_here'/$dbname/" wp-config.php`;
 		`sed -i "s/'username_here'/$dbuser/" wp-config.php`;
