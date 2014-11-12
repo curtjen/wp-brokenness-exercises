@@ -18,5 +18,11 @@ $(document).ready(function(e) {
 			alert('Please enter your database password.');
 			return false;
 		}
+
+		if( $('input[type="checkbox"]').prop('checked') == false ) {
+			e.preventDefault();
+			alert('Please check the database agreement box.');
+			return false;
+		}
 	});
 });
