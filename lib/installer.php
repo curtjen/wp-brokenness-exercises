@@ -21,8 +21,7 @@ function setup_kits() {
 		echo "Unzipped $kit";
 
 		chdir("../TestPress$kitnum");
-		echo getcwd();
-		system( 'rm -rf wp-config.php' );
+		`rm -rf wp-config.php`;
 		`cp wp-config-sample.php wp-config.php`;
 		`sed -i "s/'database_name_here'/$dbname/" wp-config.php`;
 		`sed -i "s/'username_here'/$dbuser/" wp-config.php`;
